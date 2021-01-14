@@ -201,7 +201,7 @@ class Black_Jack:
         return action
 
     ## Play Black Jack
-    def Play(self, rounds = 100000):
+    def Play(self, rounds = 5000000):
         for i in tqdm(range(rounds)):
 
             ## Inital Set up for the game (Distribute two cards to the dealer and the player)
@@ -225,3 +225,9 @@ class Black_Jack:
 
             ## Reset the game
             self.Reset()
+
+
+if __name__ == '__main__':
+    blackjack = Black_Jack()
+    blackjack.Play(5000000)
+    print(blackjack.player_Q_values)
